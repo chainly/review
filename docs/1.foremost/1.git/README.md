@@ -73,9 +73,18 @@ git push -f
 # 2. revert
 git revert --no-commit A..HEAD 
 
-# 3. reset
-git reset --mixed HEAD^
+# 3. reset (for all option: reset HEAD to ${HASH})
+# https://git-scm.com/docs/git-reset#git-reset-emgitresetemltmodegtltcommitgt
+# Resets the index，and working tree(here ~= undo)
+git reset --hard ${HASH}
+# all your changed files "Changes to be committed"(here ~= add undo)
+git reset --soft HEAD^
+# @TODO: maybe something wrong, but tested!
 
+# --mixed: Resets the index but not the working tree
+# https://stackoverflow.com/a/2530073/6493535
+# --merge: mixed 但保持commit间不同以及当前修改未提交的(同时满足的action.abort)
+# --keep: mixed 但保持commit间不同(此文件当前有修改action..abort)
 ```
 
 
