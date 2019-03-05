@@ -27,7 +27,7 @@ source ~/.bashrc
 # or: https://www.digitalocean.com/community/tutorials/how-to-add-swap-on-centos-7
 # fallocate && chmod 600 && mkswap && swapon && /etc/fstab && swapoff
 gem install jekyll bundler
-
+```
 
 # structure
 https://jekyllrb.com/docs/structure/
@@ -41,4 +41,5 @@ bundle exec jekyll serve -H 127.0.0.1
 # config
 https://github.com/jekyll/jekyll/blob/master/docs/_config.yml
 
-
+# example @TODO: copy
+https://github.com/jekyll/jekyll
