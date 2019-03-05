@@ -93,4 +93,10 @@ layout: home
 	# --keep: mixed 但保持commit间不同(此文件当前有修改action..abort)
 	```
 	
-
+1. clean
+```
+# test
+git clean -n
+# force
+git clean -f
+```
