@@ -38,4 +38,7 @@ jekyll new docs
 bundle exec jekyll serve -H 127.0.0.1
 ```
 
+# config
+https://github.com/jekyll/jekyll/blob/master/docs/_config.yml
+
 
