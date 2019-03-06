@@ -1,0 +1,5 @@
+#! /bin/bash
+# pull before commit
+# https://stackoverflow.com/a/26624598/6493535
+# @TODO: this call each file in basename.d/
+test -z "$(git fetch --dry-run 2>&1)" || exit 1
