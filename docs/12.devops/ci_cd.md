@@ -16,4 +16,44 @@
 ### svn
 pass
 
-## 
+## 测试部署
+### 流程
+- 通过webhook/web/cmd触发
+- 自动生成/初始化目标机器(集群)
+- 通过ssh/api等协议连接console
+- 执行自动测试脚本
+- 反馈结果
+- clear
+
+### 工具
+- Jenkins
+- Travis CI
+- 
+
+#### 触发
+- git.hooks/webhooks
+- web
+- ansible/...
+-
+
+#### vm
+- openstack
+- docker
+
+#### remote.execute
+- paramiko
+- websocket
+- pty
+
+#### 测试
+- unittest
+- 脚本
+
+#### 反馈
+pass
+
+# CD
+## 生产版本部署
+pass
+
+
