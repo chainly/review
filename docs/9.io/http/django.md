@@ -62,7 +62,8 @@ django.core.management.commands.runserver.Command
 						self.socket.accept
 					process_request
 						# 请求处理
-						finish_request
+						finish_request: self.RequestHandlerClass=WSGIRequestHandler(request)
+							@TODO: WSGIRequestHandler.handle()
 						handle_error
 						shutdown_request
 					shutdown_request

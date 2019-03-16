@@ -100,3 +100,17 @@ type
 class = type('class.name', bases(->super), dict(->k: v))
 instance = class(*args, **kwargs)
 ```
+
+## iteration
+__iter__(self): self.p=len(self.t];return self
+__next__(self): self.p-=1; if self.p<=0: raise StopIteration;return self.t[self.p]
+
+## Generators
+lazy iteration
+
+## Generators Expression
+g = (a,b for a,b in iter({}))
+## 推导式
+l = [a,b for a,b in iter({})]
+d = {a,b for a,b in iter({})}
+
