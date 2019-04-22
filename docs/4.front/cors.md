@@ -43,6 +43,10 @@
 
 ### django
 
+> you also need to set `SESSION_COOKIE_SAMESITE = None` in django.settings
+>> https://www.owasp.org/index.php/SameSite **but it may in danger, only for test**
+>> maybe use `nginx to proxy angular and django` or token like:`OAuth2` or `simple user<->token`
+
 # server-side
 
     def login(request):
