@@ -37,5 +37,35 @@ certbot --nginx -d qianli.cc -d "www.qianli.cc" -d "opqian.com" -d "vpn.opqian.c
 # A: need to change plugin or something else, @TODO
 
 # renew
-certbot renew
+echo '0 0 * * * /usr/bin/certbot renew' >> /var/spool/cron/root
 ```
+
+## nginx
+
+### ssl.conf
+```
+[root@host ~]# cat /etc/nginx/conf.d/ssl.conf 
+
+server {
+    listen              443 ssl;
+    server_name         _;
+    ssl_certificate     /etc/letsencrypt/live/qianli.cc/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/qianli.cc/privkey.pem;
+    ssl_protocols       TLSv1 TLSv1.1 TLSv1.2;
+    ssl_ciphers         HIGH:!aNULL:!MD5;
+    location / {
+        root   /data/cc/cc-client;
+#        root   /usr/share/nginx/html;
+#        index  index.html index.htm;
+    }
+
+    location /api {
+        uwsgi_pass   127.0.0.1:8000;
+        include uwsgi_params;
+    }
+
+}
+
+```
+
+
