@@ -35,4 +35,7 @@ certbot --nginx -d qianli.cc -d "www.qianli.cc" -d "opqian.com" -d "vpn.opqian.c
 # Client with the currently selected authenticator does not support any combination of challenges that will satisfy the CA.
 # You may need to use an authenticator plugin that can do challenges over DNS.
 # A: need to change plugin or something else, @TODO
+
+# renew
+certbot renew
 ```
